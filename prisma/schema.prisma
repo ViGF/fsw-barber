@@ -49,7 +49,6 @@ model Booking {
   serviceId    String
   service      Service    @relation(fields: [serviceId], references: [id])
   date         DateTime
-  status       String
   barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
   barbershopId String
   createdAt    DateTime   @default(now())
