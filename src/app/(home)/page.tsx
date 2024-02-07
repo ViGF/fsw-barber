@@ -44,22 +44,24 @@ export default async function Home() {
         <Search />
       </div>
 
-      <div className="mt-6">
-        <h2 className="pl-5 text-xs uppercase text-gray-400 font-bold mb-3">
-          Agendamentos
-        </h2>
-        <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden px-5">
-          {confirmedBookings.map((booking) => (
-            <BookingItem key={booking.id} booking={booking} />
-          ))}
+      {confirmedBookings.length > 0 && (
+        <div className="mt-6">
+          <h2 className="pl-5 text-xs uppercase text-gray-400 font-bold mb-3">
+            Agendamentos
+          </h2>
+          <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden px-5">
+            {confirmedBookings.map((booking) => (
+              <BookingItem key={booking.id} booking={booking} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="mt-6">
         <h2 className="px-5 text-xs uppercase text-gray-400 font-bold mb-3">
           Recomendados
         </h2>
-        <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden px-5 mb-[4.5rem]">
+        <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden px-5 mb-4">
           {barbershop.map((barbershop) => (
             <BarbershopItem key={barbershop.id} barbershop={barbershop} />
           ))}
@@ -70,7 +72,7 @@ export default async function Home() {
         <h2 className="px-5 text-xs uppercase text-gray-400 font-bold mb-3">
           Populares
         </h2>
-        <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden px-5 mb-[4.5rem]">
+        <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden px-5 mb-4">
           {barbershop.map((barbershop) => (
             <BarbershopItem key={barbershop.id} barbershop={barbershop} />
           ))}
