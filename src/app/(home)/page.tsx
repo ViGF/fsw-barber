@@ -13,7 +13,7 @@ export default async function Home() {
 
   const [barbershop, confirmedBookings] = await Promise.all([
     db.barbershop.findMany(),
-    session.user
+    session?.user
       ? db.booking.findMany({
           where: {
             userId: (session.user as any).id,
@@ -34,7 +34,9 @@ export default async function Home() {
       <Header />
 
       <div className="px-5 pt-5">
-        <h2 className="text-xl font-bold">Olá, Miguel!</h2>
+        <h2 className="text-xl font-bold">
+          {session?.user ? `Olá, ${(session.user as any).name.split()[0]}!` : 'Olá, vamos agendar um corte hoje?'}
+        </h2>
         <p className="capitalize text-sm">
           {format(new Date(), "EEEE',' dd 'de' MMMM", { locale: ptBR })}
         </p>
