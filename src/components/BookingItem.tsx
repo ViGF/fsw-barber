@@ -55,6 +55,8 @@ export function BookingItem({ booking }: BookingItemProps) {
       toast.success("Reserva cancelada com sucesso")
     } catch (error) {
       console.log(error)
+    } finally {
+      setIsDeleteLoading(false)
     }
   }
 
