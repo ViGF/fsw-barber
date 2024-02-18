@@ -15,7 +15,7 @@ Todas as barbearias e detalhes como preços e links das imagens são armazenadas
 - Next.js | TypeScript | TailwindCSS | Shadcn-ui | lucid-react | Prisma | date-fns | zod
 
 ## 🔖 Layout
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/1gbVNaWC6U8MnEy0jhPbg8/FSW-Store-%5BLive%5D-(Copy)?type=design&node-id=89%3A280&mode=design&t=yVqM5sAnpUxxP9E5-1).
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/N0KBLAxgXl9OVeWTGwS2OK/FSW-Barber-%5BLive%5D?type=design&node-id=1%3A6&mode=design&t=6hN4VdC5ieDlVoM5-1).
 
 ## 💻 Uso
 Crie sua aplicação através do Github. Configure o seu banco de dados postgresql, adicione a url de conexão nas variáveis ambiente e execute a seed do banco. Preencha todas as variáveis ambientes em um arquivo chamado *.env*, siga a nomenclatura usada no arquivo de exemplo (*.env.example*), utilize também o Prisma para iniciar o seu banco. Lembrei se configurar a autenticação OAuth no Google Developer Console
